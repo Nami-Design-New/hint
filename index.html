@@ -17,12 +17,14 @@
   <link rel="stylesheet" href="css/odometer.min.css" />
   <!-- select2 -->
   <link rel="stylesheet" href="css/select2.min.css" />
+  <!-- Filepond css -->
+  <link rel="stylesheet" href="css/filepond.min.css" />
   <!-- Custom style  -->
   <link rel="stylesheet" id="styleLink" href="css/style.css" />
 </head>
 
 <body>
-    <!-- header -->
+  <!-- header -->
   <header>
     <nav>
       <!-- logo -->
@@ -30,7 +32,6 @@
         <img src="img/logo.png" />
         <span> Hint </span>
       </a>
-      
       <div class="dropdown">
         <img class="icon me-2" src="img/language.svg" alt="">
         اللغة
@@ -64,51 +65,42 @@
         <div class="form_content">
           <!-- question -->
           <div class="question_title">
-            <h1> اسمك ايه </h1>
+            <h1> ما هو رأيك في جودة الطعام؟ </h1>
           </div>
           <!-- question options -->
           <div class=" form_items radio-list">
             <!-- option -->
-            <label id="option1-1">
-              <h5> انسان </h5>
-              <input for=" option1-1" type="radio" class="required" name="stp_1_option" value="انسان">
+            <label id="option1-2">
+              <h5> ضعيف </h5>
+              <p> مع ذكر السبب </p>
+              <input for="option1-2" type="radio" class="required" name="stp_1_option" value="ضعيف" id="condition2">
             </label>
             <!-- option -->
-            <label id="option1-2">
-              <h5> محمود </h5>
-              <p> مع ذكر اسم الاب </p>
-              <input for="option1-2" type="radio" class="required" name="stp_1_option" value="محمود" id="condition2">
+            <label id="option1-1">
+              <h5> مقبول </h5>
+              <input for="option1-1" type="radio" class="required" name="stp_1_option" value="مقبول">
             </label>
             <!-- option -->
             <label id="option1-3">
-              <h5> حيوان </h5>
-              <p> مع ذكر نوع الحيوان </p>
-              <input for="option1-3" type="radio" class="required" name="stp_1_option" value="حيوان" id="condition3">
+              <h5> جيد جداً </h5>
+              <input for="option1-3" type="radio" class="required" name="stp_1_option" value="جيد جداً">
             </label>
             <!-- option -->
             <label id="option1-4">
-              <h5> محمد </h5>
-              <input for=" option1-4" type="radio" class="required" name="stp_1_option" value="محمد">
+              <h5> رائع </h5>
+              <input for="option1-4" type="radio" class="required" name="stp_1_option" value="رائع">
             </label>
           </div>
           <!-- condition -->
-          <div class="conditional" data-condition="#condition2 && stp_1_option == 'محمود'">
-            <label for="field" class="form-label"> ما هو اسم الاب </label>
+          <div class="conditional" data-condition="#condition2 && stp_1_option == 'ضعيف'">
+            <label for="field" class="form-label"> اكتب السبب </label>
             <input type="text" name="field" class="inputForm required" minlength="2" placeholder="اكتب هنا ...">
           </div>
-          <!-- condition -->
-          <div class="conditional" data-condition="#condition3 && stp_1_option == 'حيوان'">
-            <label for="field" class="form-label"> ما هو نوع الحيوان </label>
-            <input type="text" name="field" class="inputForm required" minlength="2" placeholder="اكتب هنا ...">
-          </div>
-
         </div>
         <!-- Form-btn -->
         <div class="form_btn">
           <button type="button" class="js-btn-next btn"> التالي</button>
         </div>
-
-        
       </div>
       <!------------------- Step-2 -------------------->
       <div class="multisteps_form_panel ">
@@ -116,38 +108,21 @@
         <div class="form_content">
           <!-- question -->
           <div class="question_title">
-            <h1> عايش من امتي </h1>
+            <h1> ما هو رأيك في جودة الخدمة؟ </h1>
           </div>
           <!-- question options -->
-          <div class=" form_items radio-list">
-            <!-- option -->
-            <label id="option2-1">
-              <h5> زمان </h5>
-              <input for=" option2-1" type="radio" class="required" name="stp_2_option" value="زمان">
-            </label>
-            <!-- option -->
-            <label id="option2-2">
-              <h5> 10 </h5>
-              <input for="option2-2" type="radio" class="required" name="stp_2_option" value="10">
-            </label>
-            <!-- option -->
-            <label id="option2-3">
-              <h5> 15 </h5>
-              <input for="option2-3" type="radio" class="required" name="stp_2_option" value="15">
-            </label>
-            <!-- option -->
-            <label id="option2-4">
-              <h5> 30 </h5>
-              <input for=" option2-4" type="radio" class="required" name="stp_2_option" value="30">
-            </label>
-          </div>
+          <select class="select2">
+            <option value="رائع"> رائع </option>
+            <option value="جيد جداً"> جيد جداً </option>
+            <option value="مقبول"> مقبول </option>
+            <option value="مقبول"> مقبول </option>
+          </select>
         </div>
         <!-- Form-btn -->
         <div class="form_btn">
-          <button type="button" class="js-btn-prev btn btnOutline">  السابق </button>
+          <button type="button" class="js-btn-prev btn btnOutline"> السابق </button>
           <button type="button" class="js-btn-next btn"> التالي</button>
         </div>
-        
       </div>
       <!------------------- Step-3 -------------------->
       <div class="multisteps_form_panel ">
@@ -155,7 +130,7 @@
         <div class="form_content">
           <!-- question -->
           <div class="question_title">
-            <h1> اختر من الصور </h1>
+            <h1> هل تتذكر الشعار الخاص بنا </h1>
           </div>
           <!-- question options -->
           <div class=" form_items radio-list">
@@ -183,43 +158,74 @@
         </div>
         <!-- Form-btn -->
         <div class="form_btn">
-          <button type="button" class="js-btn-prev btn btnOutline">  السابق </button>
+          <button type="button" class="js-btn-prev btn btnOutline"> السابق </button>
           <button type="button" class="js-btn-next btn"> التالي</button>
         </div>
-
-      
-
       </div>
-      <!------------------ Step-4 -------------------->
+      <!------------------- Step-4 -------------------->
+      <div class="multisteps_form_panel ">
+        <!-- form-content -->
+        <div class="form_content">
+          <!-- question -->
+          <div class="question_title">
+            <h1> احكيلنا تجربتك </h1>
+          </div>
+          <!-- question options -->
+          <textarea class="inputForm" rows="10" placeholder="اكتب هنا"></textarea>
+        </div>
+        <!-- Form-btn -->
+        <div class="form_btn">
+          <button type="button" class="js-btn-prev btn btnOutline"> السابق </button>
+          <button type="button" class="js-btn-next btn"> التالي</button>
+        </div>
+      </div>
+      <!------------------- Step-5 -------------------->
+      <div class="multisteps_form_panel ">
+        <!-- form-content -->
+        <div class="form_content">
+          <!-- question -->
+          <div class="question_title">
+            <h1> ارفع ملف </h1>
+          </div>
+          <!-- question options -->
+          <input type="file" class="filepond-multiple">
+        </div>
+        <!-- Form-btn -->
+        <div class="form_btn">
+          <button type="button" class="js-btn-prev btn btnOutline"> السابق </button>
+          <button type="button" class="js-btn-next btn"> التالي</button>
+        </div>
+      </div>
+      <!------------------ Step-6 -------------------->
       <div class="multisteps_form_panel">
         <!-- form-content -->
         <div class="form_content">
           <!-- question -->
           <div class="question_title">
-            <h1> مما تتكون الاسرة ؟ </h1>
+            <h1> من وين عرفتنا ؟ </h1>
           </div>
           <!-- question options -->
           <div class="form_items check-list">
             <!-- option -->
             <label id="option4-1" checkbox>
-              <h5> الاب </h5>
-              <input for=" option4-1" type="checkbox" class="required" name="stp_2_select_option" value="الاب">
+              <h5> اعلانات </h5>
+              <input for=" option4-1" type="checkbox" class="required" name="stp_2_select_option" value="اعلانات">
             </label>
             <!-- option -->
             <label id="option4-2" checkbox>
-              <h5> الام </h5>
-              <input for=" option4-2" type="checkbox" class="required" name="stp_2_select_option" value="الام">
+              <h5> الاصدقاء </h5>
+              <input for=" option4-2" type="checkbox" class="required" name="stp_2_select_option" value="الاصدقاء">
             </label>
             <!-- option -->
             <label id="option4-3" checkbox>
-              <h5>الصديق</h5>
-              <input for=" option4-3" type="checkbox" class="required" name="stp_2_select_option" value="الصديق">
+              <h5>طريقة اخري</h5>
+              <input for=" option4-3" type="checkbox" class="required" name="stp_2_select_option" value="طريقة اخري">
             </label>
           </div>
         </div>
         <!-- Form-btn -->
         <div class="form_btn">
-          <button type="button" class="js-btn-prev btn btnOutline">  السابق </button>
+          <button type="button" class="js-btn-prev btn btnOutline"> السابق </button>
           <button type="submit" class="btn2"> انهاء الاستبيان </button>
         </div>
       </div>
@@ -244,20 +250,42 @@
   <script src="js/select2.min.js"></script>
   <!-- custom -->
   <script src="js/custom.js"></script>
-
   <!-- jQuery-validate-js include -->
   <script src="js/exam/jquery.validate.min.js"></script>
   <!-- jQuery-validate-js include -->
   <script src="js/exam/conditionize.flexible.jquery.min.js"></script>
   <!-- Custom-js include -->
   <script src="js/exam/script.js"></script>
-
   <script>
     $(document).ready(function () {
       $(".answer").hide();
       $(".answerBtn").click(function () {
         $(this).closest(".correctAnswer").find('.answer').slideDown("slow");
       });
+    });
+  </script>
+  <!-- filepond js -->
+  <script src="js/filepond.min.js"></script>
+  <script>
+    // filepond
+    FilePond.registerPlugin(FilePondPluginImagePreview);
+    $(".filepond-circle").filepond({
+      labelIdle: `Drag & Drop your picture or <span class="filepond--label-action"> Browse </span>`,
+      imagePreviewHeight: 170,
+      imageCropAspectRatio: "1:1",
+      imageResizeTargetWidth: 200,
+      imageResizeTargetHeight: 200,
+      stylePanelLayout: "compact circle",
+      styleLoadIndicatorPosition: "center bottom",
+      styleProgressIndicatorPosition: "left bottom",
+      styleButtonRemoveItemPosition: "center bottom",
+      styleButtonProcessItemPosition: "right bottom",
+    });
+    $(".filepond").filepond({
+      mirror: true,
+    });
+    $(".filepond-multiple").filepond({
+      allowMultiple: true,
     });
   </script>
 </body>
