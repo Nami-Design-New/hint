@@ -1,10 +1,10 @@
 :root {
-  --mainColor: #F2672B;
-  --mainColor10: #F2672B10;
-  --mainColor30: #F2672B30;
-  --secondColor: #F2672B;
-  --secondColor10: #F2672B10;
-  --secondColor30: #F2672B30;
+  --mainColor: #f2672b;
+  --mainColor10: #f2672b10;
+  --mainColor30: #f2672b30;
+  --secondColor: #f2672b;
+  --secondColor10: #f2672b10;
+  --secondColor30: #f2672b30;
   --gold: #ffd700;
   --whiteColor: #ffffff;
   --blackColor: #1f1f1f;
@@ -2583,6 +2583,60 @@ header .dropdown:hover .dropdown-content {
   display: flex;
 }
 
+.filepond--credits {
+  display: none !important;
+}
+
+.filepond--image-clip {
+  direction: ltr !important;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+.rating input {
+  display: none;
+}
+.rating input:checked ~ label {
+  animation: shake 0.5s;
+}
+.rating input:checked ~ label svg path {
+  fill: #f90;
+}
+.rating label {
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+.rating label svg {
+  width: 24px;
+  height: 24px;
+}
+.rating label svg path {
+  fill: #ddd;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 /* PC device :992px. */
 @media (min-width: 992px) {
   body {
